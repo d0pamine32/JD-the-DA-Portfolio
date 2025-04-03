@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="JD - Data Analyst Portfolio showcasing projects in Python, SQL, Tableau, and Power BI.">
+    <meta name="keywords" content="Data Analyst, Python, SQL, Power BI, Tableau, Portfolio">
+    <meta name="author" content="JD">
+    <title>Customer Shopping Data Dashboard</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <a href="index.html" class="nav-logo">
+                    <img src="images/logo.png" alt="Logo">
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#projects">Projects</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger-menu" onclick="toggleMenu()">☰</div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="main-content">
+        <section id="about-project">
+            <div class="project-text">
+                <h2>Data Professional Survey Breakdown</h2>
+
+                <!--Tools Used-->
+                <div class="project-tags">
+                    <span class="tag">Power BI</span>
+                </div>
+
+                <!--Short Description about the project-->
+                <p>This Power BI project analyzes a survey of data professionals, focusing on average salary by job title and gender, favorite programming languages, 
+                    and satisfaction with salary and work-life balance. 
+                    It also visualizes the distribution of survey participants by country, providing key insights into industry trends and global demographics. 
+                    I created this project to gain a deeper understanding of trends within the data professional community, 
+                    uncovering insights that could help industry professionals make informed career decisions and understand the evolving landscape of the field.<br>
+                    This project was an opportunity to work on a real-world dataset with a guided approach to ensure a comprehensive understanding of the subject.
+                </p>
+            </div>
+
+            <div class="dashboard-thumbnail">
+                <div class="image-grid">
+                    <div class="image-container">
+                        <img src="images/project2.webp" alt="Project Image" class="clickable-image">
+                    </div>
+                </div>
+                <div class="fullscreen-overlay">
+                    <img src="" alt="Fullscreen Image" id="fullscreen-img">
+                </div>
+
+                <!--Buttons for GitHub Repo and Live Demo(If Possible)-->
+                <a href="https://1drv.ms/x/c/3547a01d099d4709/IQRaQTCjiuPOQIB1upS3NvE7AZjzVtkaFh71GOECSZwXvrk?em=2&wdAllowInteractivity=False&Item='Dashboard'!A%3AXFD&wdHideGridlines=True&wdInConfigurator=True&wdInConfigurator=True" 
+                    target="_blank" class="file_button">
+                    <img src="images/demo.png" alt="Demo Icon" width="4">
+                    Live Demo.
+                </a>
+                <a href="https://github.com/d0pamine32/Data-Analytics-Projects/tree/main/Data%20Professional%20Survey%20Breakdown" 
+                    target="_blank" class="gitrepo_button">
+                    <img src="images/github.png" alt="Demo Icon" width="16">
+                    Github Repository
+                </a>
+            </div>
+
+            <div class="project-insights">
+
+                <!--Where did the data come from?-->
+                <h4>Data Source</h4>
+                <p>The data used in this project was sourced from Alex the Analyst's
+                    <a href="https://github.com/AlexTheAnalyst/Power-BI/blob/main/Power%20BI%20-%20Final%20Project.xlsx" target="_blank" class="data-link">Github Repo</a>.</p>
+
+                <!--What issues did you find in the raw data? How did you clean the data?-->
+                <h4>Data Cleaning</h4>
+                <p>The dataset contains several data quality issues that need to be addressed to ensure accurate and meaningful analysis. The key problems include:</p>
+                <ul class="project-list">
+                    <li>
+                        Some columns contained no data or were entirely filled with null values, making them unnecessary for analysis.
+                    </li>
+                        
+                    <li>
+                        Respondents could type custom answers after selecting “Other,” 
+                        leading to inconsistencies like "Other: Big Data" and "Other: Cloud Computing", making analysis difficult.
+                    </li>
+    
+                    <li>
+                        Some salary responses were given in ranges (e.g., "125k-150k" and "225+""), making numerical analysis and comparisons difficult.
+                    </li>
+                </ul>
+                <p>To address data quality issues, the following solutions were implemented:</p>
+                <ul class="project-list">
+                    <li>
+                        These columns were identified and removed to keep the dataset clean and focused on relevant data.
+                    </li>
+                        
+                    <li>
+                        The answers were split using a delimiter, extracting only the relevant terms and deleting the temporary column created in the process to maintain uniformity.
+                    </li>
+    
+                    <li>
+                        These salary ranges were converted into their average values (e.g., "$55,000") to ensure consistency and facilitate better analysis.
+                    </li>
+                </ul>
+
+
+
+                <!--What analytical methods did you apply?-->
+                <h4>Data Analysis Techniques</h4>
+                <p>The analysis used is <b>Descriptive Analysis</b>, which focuses on summarizing key data points such as average salary, age, work-life balance, and demographic trends. 
+                    This technique is used to explain the current state of the data by highlighting important insights and metrics.</p>
+
+                <!--What types of charts or dashboards did you create?-->
+                <h4>Data Visualization</h4>
+                <p>Various charts were used to create an interactive dashboard that effectively communicates key insights from the survey data:</p>
+                <ul class = "project-list">
+                    <li><strong>Donut Chart</strong>
+                        <ul class = "sub-list">
+                            <li>Visualizes the distribution of average salary by sex, highlighting the difference in salary between male and female data professionals. 
+                                Provides a clear, segmented view, making it easy to compare salary distributions by gender.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Gauge Chart</strong>
+                        <ul class = "sub-list">
+                            <li>Displays key metrics like work-life balance satisfaction and salary satisfaction. 
+                                Provides a visual representation of these values on a scale, making it easy to gauge overall satisfaction levels, with <strong>4.27/10</strong> for salary satisfaction and <strong>5.74/10</strong> for work-life balance satisfaction.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Bar Charts</strong>
+                        <ul class = "sub-list">
+                            <li>Shows the average salary by job title, allowing for easy comparison of salaries across different roles.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Treemap</strong>
+                        <ul class = "sub-list">
+                            <li>Visualizes the distribution of survey respondents by country, highlighting the global diversity of data professionals in a hierarchical view. 
+                                Helps to easily identify the largest groups of respondents.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Stacked Column Charts</strong>
+                        <ul class = "sub-list">
+                            <li>Represents the popularity of programming languages, with a focus on Python as the most preferred choice.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Card</strong>
+                        <ul class = "sub-list">
+                            <li>Displays the average age of survey takers and the total count of participants. 
+                                Provides a quick snapshot of the demographic and sample size.</li>
+                        </ul>
+                    </li>
+                </ul>                
+
+                <!--Conclusion Section-->
+                <h4>Conclusion</h4>
+                <p>Here are the key insights on salaries, skills, job satisfaction, and workforce demographics from the Data Professional Survey Breakdown:</p>
+                <ul class = "project-list">
+                    <li><strong>Strong Salary Growth for Data Scientists</strong>
+                        <ul class = "sub-list">
+                            <li><strong>Data Scientists</strong> lead in salary averages, highlighting the high demand and value placed on this role in the data field. 
+                                This suggests that specializing in data science could be a lucrative career path.</li>
+                        </ul>
+                    </li>
+                
+                    <li><strong>Minimal Gender Pay Gap</strong>
+                        <ul class = "sub-list">
+                            <li>The <strong>small gender salary gap</strong> indicates that the data industry is making strides toward gender pay equality, though there is always room for improvement.
+                                This is encouraging for promoting diversity and inclusion within the sector.</li>
+                        </ul>
+                    </li>
+                
+                    <li><strong>Dominance of Python</strong>
+                        <ul class = "sub-list">
+                            <li><strong>Python</strong> continues to be the most preferred programming language, reinforcing its status as the go-to language for data professionals. 
+                                It also suggests that proficiency in Python remains a critical skill for data-related careers.</li>
+                        </ul>
+                    </li>
+                
+                    <li><strong>Moderate Satisfaction with Salary and Work-Life Balance</strong>
+                        <ul class = "sub-list">
+                            <li><strong>Satisfaction with salary</strong> (4.27/10) and <strong>work-life balance</strong> (5.74/10) is notably low, pointing to potential issues in job satisfaction within the industry. 
+                                Companies may need to focus on improving both compensation packages and work-life balance initiatives to attract and retain top talent.</li>
+                        </ul>
+                    </li>
+                
+                    <li><strong>Young, But Experienced Workforce</strong>
+                        <ul class = "sub-list">
+                            <li>The <strong>average age of 29.87</strong> suggests that the data profession is attracting younger talent who are highly skilled but also at an early stage in their careers. 
+                                This could imply a dynamic and rapidly evolving workforce eager for growth and career development.</li>
+                        </ul>
+                    </li>
+                
+                    <li><strong>Global Reach of Data Professionals</strong>
+                        <ul class = "sub-list">
+                            <li>The <strong>geographic diversity</strong>, with a large portion of respondents from the US and India, shows that the data field is global, with professionals from various regions contributing to the industry. 
+                                This indicates opportunities for collaboration across borders and a diverse range of perspectives in solving data-related challenges.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p>
+                    The data shows that data professionals, especially data scientists, are enjoying competitive salaries, with Python remaining the most popular programming language. 
+                    However, work satisfaction, particularly regarding salary and work-life balance, could use improvement, as reflected in the relatively low satisfaction scores. 
+                    The workforce is young and diverse, indicating that the field is evolving quickly. 
+                    These insights are valuable for both career planning and industry strategies, highlighting strengths and areas that need attention moving forward.
+                </p>
+            </div>
+
+        
+        </section>
+    </div>
+
+    <footer>
+        © 2025 Your Name | All Rights Reserved
+    </footer>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="JD - Data Analyst Portfolio showcasing projects in Python, SQL, Tableau, and Power BI.">
+    <meta name="keywords" content="Data Analyst, Python, SQL, Power BI, Tableau, Portfolio">
+    <meta name="author" content="JD">
+    <title>Customer Shopping Data Dashboard</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <a href="index.html" class="nav-logo">
+                    <img src="images/logo.png" alt="Logo">
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#projects">Projects</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger-menu" onclick="toggleMenu()">☰</div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="main-content">
+        <section id="about-project">
+            <div class="project-text">
+                <h2>Customer Shopping Data Dashboard</h2>
+
+                <!--Tools Used-->
+                <div class="project-tags">
+                    <span class="tag">Microsoft Excel</span>
+                </div>
+
+                <!--Short Description about the project-->
+                <p>Have you ever wondered what drives customers to buy certain products or how sales trends change over time? 
+                    That curiosity led me to this project. 
+                    I wanted to take raw sales data and turn it into something interactive and insightful. 
+                    Something that could help businesses understand their customers better and make smarter decisions.</p>
+            </div>
+
+            <div class="dashboard-thumbnail">
+                <div class="image-grid">
+                    <div class="image-container">
+                        <img src="images/project1.webp" alt="Project Image" class="clickable-image">
+                    </div>
+                </div>
+                <div class="fullscreen-overlay">
+                    <img src="" alt="Fullscreen Image" id="fullscreen-img">
+                </div>
+
+                <!--Buttons for GitHub Repo and Live Demo(If Possible)-->
+                <a href="https://1drv.ms/x/c/3547a01d099d4709/IQRaQTCjiuPOQIB1upS3NvE7AZjzVtkaFh71GOECSZwXvrk?em=2&wdAllowInteractivity=False&Item='Dashboard'!A%3AXFD&wdHideGridlines=True&wdInConfigurator=True&wdInConfigurator=True" 
+                    target="_blank" class="file_button">
+                    <img src="images/demo.png" alt="Demo Icon" width="4">
+                    Live Demo.
+                </a>
+                <a href="https://github.com/d0pamine32/Data-Analytics-Projects/tree/main/Customer%20Shopping%20Project" 
+                    target="_blank" class="gitrepo_button">
+                    <img src="images/github.png" alt="Demo Icon" width="16">
+                    Github Repository
+                </a>
+            </div>
+
+            <div class="project-insights">
+
+                <!--Where did the data come from?-->
+                <h4>Data Source</h4>
+                <p>The data used in this project was sourced from 
+                    <a href="https://www.kaggle.com/datasets/mehmettahiraslan/customer-shopping-dataset" target="_blank" class="data-link">Kaggle</a>.</p>.</p>
+
+                <!--What issues did you find in the raw data? How did you clean the data?-->
+                <h4>Data Cleaning</h4>
+                <p>The data was generally well-structured, with the only issue being the <b>invoice_date</b>, which had an inconsistent format and incorrect data type. 
+                    To resolve this, I standardized the format to <b>MMM/DD/YYYY</b> before converting it to a date data type.</p>
+
+                <!--What analytical methods did you apply?-->
+                <h4>Data Analysis Techniques</h4>
+                <p><b>Descriptive analysis</b> was used in this project to summarize key shopping trends, including total sales over time and across different locations. 
+                    The dashboard also provides insights into average spending by age bracket, helping to identify customer purchasing patterns. </p>
+
+                <!--What types of charts or dashboards did you create?-->
+                <h4>Data Visualization</h4>
+                <p>This interactive dashboard provides a detailed analysis of shopping trends through various visualizations. 
+                    It features time series line charts to monitor sales over time and bar charts for comparing revenue across locations and spending patterns by age group. 
+                    With dynamic filtering options, users can refine insights based on gender, date, purchased products, or payment methods.</p>
+
+                <!--Conclusion Section-->
+                <h4>Conclusion</h4>
+                <p>This customer shopping data dashboard provides key insights into sales performance, spending habits, and location-based revenue trends. 
+                    By analyzing sales by category, total sales per location, and average spending by age group, 
+                    businesses can better understand consumer behavior and optimize their strategies.</p>
+                    <ul class = "project-list">
+                        <li><strong>Sales per Category</strong>
+                            <ul class = "sub-list">
+                                <li>Books had the highest sales. Shoes and Technology followed closely behind.</li>
+                            </ul>
+                        </li>
+                    
+                        <li><strong>Total Sales per Location</strong>
+                            <ul class = "sub-list">
+                                <li>Mall of Istanbul recorded the highest total sales. Kanyon ranked second, with a small gap in sales.</li>
+                            </ul>
+                        </li>
+                    
+                        <li><strong>Average Spending by Age Bracket</strong>
+                            <ul class = "sub-list">
+                                <li>Middle-aged adults had the highest average spending.</li>
+                            </ul>
+                        </li>
+    
+                    </ul>
+                    <p>
+                        <strong>Books</strong> lead in sales, followed by <b>Shoes</b> and <b>Technology</b>, making them key investment areas. 
+                        <strong>Mall of Istanbul</strong> and <strong>Kanyon</strong> show strong sales, highlighting prime retail locations. 
+                        <strong>Middle-aged adults</strong> spend the most, presenting an opportunity for targeted marketing. 
+                        Businesses should focus on <strong>stocking top-selling products, boosting promotions in high-traffic areas, and personalizing offers</strong> to maximize revenue.
+                    </p>
+            </div>
+
+        
+        </section>
+    </div>
+
+    <footer>
+        © 2025 Your Name | All Rights Reserved
+    </footer>
+</body>
+</html>

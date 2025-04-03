@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="JD - Data Analyst Portfolio showcasing projects in Python, SQL, Tableau, and Power BI.">
+    <meta name="keywords" content="Data Analyst, Python, SQL, Power BI, Tableau, Portfolio">
+    <meta name="author" content="JD">
+    <title>Customer Shopping Data Dashboard</title>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <a href="index.html" class="nav-logo">
+                    <img src="images/logo.png" alt="Logo">
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#projects">Projects</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger-menu" onclick="toggleMenu()">☰</div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="main-content">
+        <section id="about-project">
+            <div class="project-text">
+                <h2>Lifestyle Sustainability EDA</h2>
+
+                <!--Tools Used-->
+                <div class="project-tags">
+                    <span class="tag">Python</span>
+                </div>
+
+                <!--Short Description about the project-->
+                
+                <p>This exploratory data analysis (EDA) examines resource consumption, physical activity, waste management, and dietary habits to identify sustainability trends. 
+                    By analyzing electricity and water usage across locations, tracking plastic disposal methods, and assessing lifestyle choices across age groups, 
+                    this study provides insights into sustainable living practices and areas for improvement.
+                    <br><br>
+                    Here are the problems that I have solved, following some of its answers:
+                </p>
+                <div class="image-snippet">
+                    <img src="images/lifestyle-eda-images/questions.png" alt="Project Image" class="clickable-image">
+                </div> 
+                    
+               
+            </div>
+
+            <div class="dashboard-thumbnail">
+                <div class="image-grid">
+                    <div class="image-container">
+                        <img src="images/lifestyle-eda-images/LS_EDA_Chart1.png" alt="Project Image" class="clickable-image">
+                    </div>
+                    <div class="image-container">
+                        <img src="images/lifestyle-eda-images/LS_EDA_Chart2.png" alt="Project Image" class="clickable-image">
+                    </div>
+                    <div class="image-container">
+                        <img src="images/lifestyle-eda-images/LS_EDA_Chart3.png" alt="Project Image" class="clickable-image">
+                    </div>
+                    <div class="image-container">
+                        <img src="images/lifestyle-eda-images/LS_EDA_Chart4.png" alt="Project Image" class="clickable-image">
+                    </div>
+                </div>
+                <div class="fullscreen-overlay">
+                    <img src="" alt="Fullscreen Image" id="fullscreen-img">
+                </div>
+
+                <!--Buttons for GitHub Repo and Live Demo(If Possible)-->
+                <a href="https://nbviewer.org/github/d0pamine32/Data-Analytics-Projects/blob/main/Lifestyle%20Sustainability%20EDA/Lifestyle%20Sustainability%20EDA.ipynb" 
+                    target="_blank" class="file_button">
+                    <i class="fas fa-eye"></i>
+                    View EDA Notebook
+                </a>
+                <a href="https://github.com/d0pamine32/Data-Analytics-Projects/tree/main/Customer%20Shopping%20Project" 
+                    target="_blank" class="gitrepo_button">
+                    <img src="images/github.png" alt="Demo Icon" width="16">
+                    Github Repository
+                </a>
+            </div>
+
+            <div class="project-insights">
+
+                <!--Where did the data come from?-->
+                <h4>Data Source</h4>
+                <p>The data used in this project was sourced from 
+                    <a href="https://www.kaggle.com/datasets/naveennas/sustainable-lifestyle-rating-dataset" target="_blank" class="data-link">Kaggle</a>.</p>
+
+                <!--What issues did you find in the raw data? How did you clean the data?-->
+                <h4>Data Cleaning</h4>
+                <p>Before diving into exploratory data analysis (EDA), I ensured the dataset was clean and structured for accurate insights. The following steps were taken:</p>
+
+                <ul class="project-list">
+                    <li>
+                        Checked dataset structure using <code>df.info()</code> to understand column types and detect any inconsistencies.
+                        <div class="image-snippet">
+                            <img src="images/lifestyle-eda-images/df_info.png" alt="Dataset structure" class="clickable-image">
+                        </div>
+                    </li>
+                    
+                    <li>
+                        Identified missing values with <code>df.isnull().sum()</code> to determine the extent of missing data. 
+                        <i>Community Involvement</i> and <i>Physical Activities</i> had null values.
+                        <div class="image-snippet">
+                            <img src="images/lifestyle-eda-images/check_null.png" alt="Missing values check" class="clickable-image">
+                        </div>
+                    </li>
+
+                    <li>
+                        The columns <i>CommunityInvolvement</i>, <i>SustainableBrands</i>, and <i>ClothingFrequency</i> 
+                        were unrelated to the key objectives of the EDA, so they were removed to maintain a focused and efficient analysis.
+                        <div class="image-snippet">
+                            <img src="images/lifestyle-eda-images/drop_col.png" alt="Dropped columns" class="clickable-image">
+                        </div>
+                    </li>
+
+                    <li>
+                        The column <i>PhysicalActivities</i> was interesting despite having many null values, and I found it essential for the analysis. 
+                        Missing values were filled with <i>Prefer not to say</i> since they likely represent respondents who chose not to disclose this information.
+                        <div class="image-snippet">
+                            <img src="images/lifestyle-eda-images/fill_na.png" alt="Filled missing values" class="clickable-image">
+                        </div>
+                    </li>
+                </ul>
+
+                
+                <!--What analytical methods did you apply?-->
+                <h4>Data Analysis Techniques</h4>
+                <p><strong>Descriptive analysis</strong> was utilized to summarize and interpret key aspects of sustainability and lifestyle trends across various demographic groups and locations. The analysis involved:</p>
+                    <ul class="project-list">
+                        <li><strong>Average monthly electricity and water consumption</strong> for each location to identify regional patterns in resource usage.</li>
+
+                        <li><strong>Count of physical activities</strong> based on gender to explore participation differences in sustainable physical practices.</li>
+
+                        <li><strong>Frequency of plastic use</strong> and the <strong>disposal methods</strong> used for each location to evaluate sustainability practices related to waste management.</li>
+                        
+                        <li>Categorizing participants into <strong>age brackets</strong> (e.g., 18-26 as Adolescence) to better understand age-based trends and behaviors.</li>
+                        
+                        <li>Analyzing <strong>DietType</strong> based on <strong>age bracket</strong> and <strong>gender</strong> to explore how these factors influence dietary preferences related to sustainability.</li>
+                    </ul>
+                <p>This approach provides an overall view of how different demographic variables contribute to sustainable lifestyle choices and behaviors.</p>
+
+
+                <!--What types of charts or dashboards did you create?-->
+                <h4>Data Visualization</h4>
+                <p><p>To bring the Lifestyle Sustainability EDA to life, different visualizations were used to make the insights clear and engaging. 
+                    A <b>bar graph</b> was the best fit to compare <b>resource consumption across locations</b> and <b>physical activity levels by gender</b>, 
+                    giving a straightforward look at how these factors vary. Since comparing categories side by side can get messy, 
+                    a <b>horizontal bar graph</b> made it easier to visualize <b>plastic usage and disposal methods per location</b>, 
+                    keeping everything neat and readable. Finally, a <b>heatmap</b> was the perfect choice for showcasing <b>diet types across different age groups</b>, 
+                    revealing patterns in dietary preferences at a glance. 
+                    These visualizations not only make the data easier to digest but also highlight key sustainability trends that might otherwise go unnoticed.</p>
+            </p>
+
+                <!--Conclusion Section-->
+                <h4>Conclusion</h4>
+                <p>This exploratory data analysis examines lifestyle sustainability across different demographics, focusing on resource consumption, 
+                    physical activity, plastic usage, disposal methods, and diet preferences. 
+                    The findings reveal how location, gender, and age influence sustainable habits.</p>
+                <ul class = "project-list">
+                    <li><strong>Resource Consumption</strong>
+                        <ul class = "sub-list">
+                            <li>Rural areas have the highest water and electricity consumption, though the differences across locations are slight.</li>
+                        </ul>
+                    </li>
+                
+                    <li><strong>Physical Activity</strong>
+                        <ul class = "sub-list">
+                            <li>Females engage in "High" levels of physical activity the most. 
+                                Other genders show a more balanced distribution in activity levels.</li>
+                        </ul>
+                    </li>
+                
+                    <li><strong>Plastic Usage</strong>
+                        <ul class = "sub-list">
+                            <li>Urban residents "Often" use plastic products. Suburban residents "Sometimes" use plastic.
+                                Rural residents "Rarely" use plastic.</li>
+                        </ul>
+                    </li>
+                
+                    <li><strong>Disposal Methods</strong>
+                        <ul class = "sub-list">
+                            <li>Suburban areas primarily use Recycling. Urban areas lean towards Composting and Landfills. 
+                                Rural areas commonly use a Combination method or Landfills.</li>
+                        </ul>
+                    </li>
+                
+                    <li><strong>Diet Preferences by Age Group</strong>
+                        <ul class = "sub-list">
+                            <li>Nearly half of middle-aged individuals follow a Plant-based diet. Seniors have an equal distribution of diet types. 
+                                Young adults also have a balanced diet distribution but lean slightly toward a Balanced diet.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p>The analysis highlights noticeable patterns in sustainability behaviors, emphasizing the impact of environment and demographics. 
+                    These insights can help guide targeted efforts to promote more sustainable practices in different communities.</p>
+            </div>
+
+        
+        </section>
+    </div>
+
+    <footer>
+        © 2025 Your Name | All Rights Reserved
+    </footer>
+</body>
+</html>
